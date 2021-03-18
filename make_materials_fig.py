@@ -189,8 +189,8 @@ if __name__ == '__main__':
 	plt.xlim(10, 2000)
 	plt.ylim(0.25, 10)
 	plt.legend(loc=2, frameon=False, ncol=2, columnspacing=1, handletextpad=0.5)
-	plt.xlabel(r"$\tau~\mathrm{[fs]}$")
-	plt.ylabel(r"$F_{\mathrm{th}}~\mathrm{[J/cm}^2]$")
+	plt.xlabel(r"$\tau\,\mathrm{[fs]}$")
+	plt.ylabel(r"$F_{\mathrm{th}}\,\mathrm{[J/cm}^2]$")
 	plt.tight_layout()
 
 	plt.savefig("materials_fig.pdf")

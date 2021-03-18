@@ -49,7 +49,7 @@ if __name__ == '__main__':
 		plt.ylim(1e-8, 1e0)
 		plt.setp(ax.get_xticklabels(), visible=False)
 		if i == 0:
-			ax.set_ylabel(r"$\mathrm{Density}/\rho_\mathrm{mat}$")
+			ax.set_ylabel(r"$\mathrm{density}/\rho_\mathrm{mat}$")
 			plt.setp(ax.get_yticklabels(), visible=False)
 			ax.legend(loc=4, frameon=False, labelspacing=0.3, handletextpad=0.2, borderaxespad=0.2)
 			ax.text(-18.7, 1.5e-1, r"$\mathrm{(a)}$")
@@ -74,7 +74,7 @@ if __name__ == '__main__':
 		plt.ylim(0.01,30)
 		plt.setp(ax2.get_xticklabels(),visible=False)
 		if i == 0:
-			plt.ylabel(r"$\mathrm{Energy~[eV]}$")
+			plt.ylabel(r"$\mathrm{energy}\,[\mathrm{eV}]$")
 			plt.setp(ax2.get_yticklabels(),visible=False)
 			plt.legend(loc=4,frameon=False,labelspacing=0.3,handletextpad=0.2,borderaxespad=0.2)
 			plt.text(-18.7, 13, r"$\mathrm{(b)}$")
@@ -91,14 +91,14 @@ if __name__ == '__main__':
 		plt.semilogy(t_axis, ee_coll_freq(results['Ekin'], mat)*1e-15, label=r"$\gamma_{ee}$", color="k", ls="--", lw=lw)
 		plt.ylim(5e-7, 50)
 		if i == 0:
-			plt.ylabel(r"$\mathrm{Rate~[fs}^{-1}]$")
+			plt.ylabel(r"$\mathrm{rate}\,[\mathrm{fs}^{-1}]$")
 			plt.setp(ax3.get_yticklabels(), visible=False)
 			plt.legend(loc=4, frameon=False, labelspacing=0.3, handletextpad=0.2, bbox_to_anchor=(0.97, -0.03))
 			plt.text(-18.7, 7, r"$\mathrm{(c)}$")
 		if i == 1:
 			ax3.yaxis.tick_right()
 			plt.text(-13.1*42.9, 7, r"$\mathrm{(f)}$")
-		plt.xlabel(r"$t~[\mathrm{fs}]$")
+		plt.xlabel(r"$t\,[\mathrm{fs}]$")
 		ax3.yaxis.set_ticks_position('both')
 		ax3.yaxis.set_ticks([1e-6, 1e-4, 1e-2, 1e0])
 		plt.xlim(t_axis.min(), t_axis.max())

@@ -64,12 +64,12 @@ if __name__ == '__main__':
     dx = x_head - x_tail
     dy = y_head - y_tail
     acolor = "0.5"
-    ax1.text(6.5, 0.2, "initial heating", rotation=90, size=12, color="0.35")
+    ax1.text(6.5, 0.3, "initial heating", rotation=90, size=12, color="0.35")
 
     plt.ylim(0, 0.5)
     plt.xlim(-2, ratios['time'].max() + 2)
     plt.ylabel(r"$\rho_{\mathrm{ci}}/\rho$")
-    plt.xlabel(r"$t~[\mathrm{fs}]$", labelpad=0)
+    plt.xlabel(r"$t\,[ \mathrm{fs} ]$", labelpad=0)
 
     ax1.set_xticks([0, 20, 40, 60, 80, 100])
 

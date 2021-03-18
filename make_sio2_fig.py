@@ -118,18 +118,18 @@ if __name__ == '__main__':
     l2, = plt.plot(taus/fs, fths_noII, c="darkgreen", lw=2.0, ls="--")
     l3, = plt.plot(taus[:12]/fs, fths_noJH[:11]+[35], c="darkblue", lw=2.0, ls="-.") #Not cheating, just removing border effect
 
-    plt.figlegend([l3,l2,l1],[r"$\mathrm{FI~only}$",r"$\mathrm{FI+LH}$",r"$\mathrm{FI+LH+CI}$"],
+    plt.figlegend([l3,l2,l1],[r"$\mathrm{FI}\,\mathrm{only}$",r"$\mathrm{FI+LH}$",r"$\mathrm{FI+LH+CI}$"],
     			loc=(0.67,0.19),frameon=False, fontsize=13)
 
     pos_arrow1 = 8
     arrow = patches.FancyArrowPatch((taus[pos_arrow1]/fs, fths_noJH[pos_arrow1]), (taus[pos_arrow1]/fs, fths_noII[pos_arrow1]), mutation_scale=12, edgecolor='darkgreen', facecolor='darkgreen', zorder=8)
     ax.add_patch(arrow)
-    plt.text(taus[pos_arrow1]/fs+10,(fths_noJH[pos_arrow1]+2*fths_noII[pos_arrow1])/3+1, r"$\mathrm{heating}$", rotation=55, c='darkgreen')
+    plt.text(taus[pos_arrow1]/fs+10,(fths_noJH[pos_arrow1]+2*fths_noII[pos_arrow1])/3+1, r"$\mathrm{heating}$", rotation=55, color='darkgreen')
 
     pos_arrow2 = (12,16)
     arrow = patches.FancyArrowPatch((taus[pos_arrow2[0]]/fs, fths_noII[pos_arrow2[0]]), (taus[pos_arrow2[1]]/fs, fths[pos_arrow2[1]]), mutation_scale=12, edgecolor='darkred', facecolor='darkred', zorder=8, connectionstyle='arc3,rad=-0.2')
     ax.add_patch(arrow)
-    plt.text((taus[pos_arrow2[0]]+taus[pos_arrow2[1]])/2/fs,(fths_noII[pos_arrow2[0]]+fths[pos_arrow2[1]])/2, r"$\mathrm{avalanche}$", c='darkred')
+    plt.text((taus[pos_arrow2[0]]+taus[pos_arrow2[1]])/2/fs,(fths_noII[pos_arrow2[0]]+fths[pos_arrow2[1]])/2, r"$\mathrm{avalanche}$", color='darkred')
 
     import numpy as np
     data_t = np.array([])
@@ -226,9 +226,9 @@ if __name__ == '__main__':
     ax.set_xscale('log')
     plt.xlim(0.8,12000)
     plt.ylim(1.0,30)
-    plt.legend(loc=(-2e-2,0.37),frameon=False,ncol=1,fontsize=13,handletextpad=0)
-    plt.xlabel(r"$\tau~\mathrm{[fs]}$")
-    plt.ylabel(r"$F_{\mathrm{th}}~\mathrm{[J/cm}^2]$",labelpad=-7, y=0.4)
+    plt.legend(loc=(-2e-2,0.37),frameon=False,ncol=1,fontsize=11,handletextpad=0)
+    plt.xlabel(r"$\tau\,\mathrm{[fs]}$")
+    plt.ylabel(r"$F_{\mathrm{th}}\,\mathrm{[J/cm}^2]$",labelpad=-7, y=0.4)
     plt.tight_layout()
 
     plt.savefig("sio2_fig.pdf")
