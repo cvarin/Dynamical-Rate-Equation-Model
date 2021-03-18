@@ -1,0 +1,6 @@
+*.pdf
+*.egg-info
+/dev
+*.pyc
+/dist
+/build
